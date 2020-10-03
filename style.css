@@ -1,0 +1,35 @@
+body {
+
+}
+header {
+    /* font-family */
+}
+nav {
+
+}
+ul {
+    
+}
+nav li {
+    /* make inline instead of block */
+}
+a {
+    /* adjust color and underline styles */
+    /* font-family */
+}
+.post {
+    border: 1px solid black;
+    /* font-family */
+}
+button {
+    /* fixed position; won't move as user enters comment and textarea element changes height */
+}
+.like_counter {
+    /* inline */
+    /* font-family */
+    /* text color */
+}
+textarea {
+    /* fixed width. height expands automatically as user types their comment. */
+    /* font-family */
+}
