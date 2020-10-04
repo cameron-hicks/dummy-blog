@@ -1,28 +1,114 @@
 body {
 
 }
+.banner {
+    padding:5px;
+    height:28px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
 header {
+    margin: 10px 50px 0 20px;
+    display: flex;
+    justify-content: space-between;
     /* font-family */
 }
-nav {
-
-}
-ul {
+header h1{
     
 }
+nav {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+ul {
+   margin: none;
+}
 nav li {
-    /* make inline instead of block */
+    display: inline;
+    /* font-family */
+    font-size: 14px;
 }
-a {
+.sidebar ul{
+    margin: 5px 0;
+    padding: 0;
+}
+.sidebar li{
+    display: block;
+}
+nav a {
     /* adjust color and underline styles */
-    /* font-family */
 }
-.post {
+img {
+    /* automatically size img elements to 100% the width and height of their div containers */
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+}
+.down {
+    font-size: 12px;
+}
+.container {
+    margin: 30px 50px 50px 30px;
+    margin-left: 50px;
+    margin-right:50px;
+    display: flex;
+    justify-content: space-between;
+}
+.carousel {
+    width:600px;
+}
+.post1 {
+    background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
+    margin-bottom: 150px;
+    height:350px;
+    position: relative;
+}
+.post2{
+    background: url("https://live.staticflickr.com/4307/35483499933_45c21a0440_b.jpg");
+    margin-bottom: 50px;
+    height:200px;
+    position: relative;
+}
+.post3{
+    background: url("https://live.staticflickr.com/5245/5229573910_7ccdfca5ce_b.jpg");
+    margin-bottom: 50px;
+    height:200px;
+    position: relative;
+}
+.post4{
+    background: url("https://live.staticflickr.com/5245/5229573910_7ccdfca5ce_b.jpg");
+    margin-bottom: 50px;
+    height:200px;
+    position: relative;
+}
+h2 {
+    font-size:18px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+article {
+    padding: 5px;
     border: 1px solid black;
-    /* font-family */
+    background: white;
+    width: 200px;
+    height: 125px;
+    margin-left: 50px;
+    margin-bottom: -30px;
+    font-size: 16px;
+    line-height: 18px;
+    position: absolute;
+    bottom: 0;
 }
 button {
     /* fixed position; won't move as user enters comment and textarea element changes height */
+}
+.send {
+
+}
+.like {
+    
 }
 .like_counter {
     /* inline */

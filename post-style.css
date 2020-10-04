@@ -1,0 +1,9 @@
+/* Example styles below. Target the first letter of the blog post to style it like a newspaper. */
+p::first-letter {
+    float: left;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: cursive;
+    padding-right: 2px;
+}
+/*Make the font size of the first paragraph of the post larger than the rest. */
