@@ -7,3 +7,22 @@ p::first-letter {
     padding-right: 2px;
 }
 /*Make the font size of the first paragraph of the post larger than the rest. */
+
+button {
+    /* fixed position; won't move as user enters comment and textarea element changes height */
+}
+.send {
+
+}
+.like {
+    
+}
+.like_counter {
+    /* inline */
+    /* font-family */
+    /* text color */
+}
+textarea {
+    /* fixed width. height expands automatically as user types their comment. */
+    /* font-family */
+}
