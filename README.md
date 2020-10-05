@@ -4,7 +4,7 @@ Dummy Mag is a mock blog for an online literary magazine. It was built using HTM
 
 ## View Site
 
-[Continuous deployment on Netlify](https://elegant-northcutt-fd1406.netlify.app/) 
+[Continuous deployment on Netlify](https://elegant-northcutt-fd1406.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/ee98c2fb-3691-4912-a3da-8128d192fae8/deploy-status)]
 
 ## Planned Features
 
@@ -12,8 +12,8 @@ Ideas for future functionality include:
 
 - Only one featured post preview will be visible on page load. When user scrolls down, three additional post previews will appear.
 
-- Full display pages for each post
+- Stylized search bar.
 
-- Content management system
+- Content management system.
 
-- Images and text on post previews auto-populate using JavaScript
+- Images and text on post previews and full post pages auto-populate using JavaScript.
