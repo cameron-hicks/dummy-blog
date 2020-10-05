@@ -56,12 +56,12 @@ a {
     color: black;
     text-decoration: none;
 }
+a:visited {
+    color: black;
+}
 a:hover {
     color:dodgerblue;
     text-decoration: underline;
-}
-a:visited {
-    color: black;
 }
 .banner a {
     font-family: 'David Libre', serif;
@@ -69,11 +69,11 @@ a:visited {
 .banner a, footer a {
     color:white;
 }
-.banner a:hover, footer a:hover {
-    color: #fce21b;
-}
 .banner a:visited, footer a:visited{
     color:white;
+}
+.banner a:hover, footer a:hover {
+    color: #fce21b;
 }
 input[type="search"]{
     /* TODO: make the magnifying glass search box */
