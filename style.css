@@ -1,23 +1,33 @@
 body {
-
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 .banner {
     /* copy font family and color from blm website */
-    padding:5px;
-    height:28px;
-    background-color: yellow;
-    color: black;
-    font-size: 20px;
+    padding:4px;
+    height:20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: 'David Libre', serif;
     text-align: center;
 }
+.equals {
+    color: #fce21b;
+}
 header {
-    margin: 10px 50px 0 50px;
+    margin: 10px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     /* font-family */
 }
 header h1{
-    
+    font-family: 'Sansita Swashed', cursive;
+}
+footer {
+    background-color: black;
+    height: 200px;
+    font-family: 'David Libre', serif;
 }
 nav {
     margin-right: 20px;
@@ -31,8 +41,16 @@ nav li {
     /* font-family */
     font-size: 14px;
 }
+a {
+    /* adjust color and underline styles */
+    /* TODO: underline shows on hover */
+    /* don't change color once visited */
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 input[type="search"]{
-    /* TODO */
+    /* TODO: make the magnifying glass search box */
+    margin-right: 10px;
+    border: 1px solid rgb(163, 163, 163);
 }
 .sidebar ul{
     margin: 5px 0;
@@ -40,9 +58,6 @@ input[type="search"]{
 }
 .sidebar li{
     display: block;
-}
-nav a {
-    /* adjust color and underline styles */
 }
 img {
     /* automatically size img elements to 100% the width and height of their div containers */
@@ -52,11 +67,10 @@ img {
 }
 .down {
     font-size: 12px;
+    margin: 2px;
 }
 .container {
-    margin: 30px 50px 50px 30px;
-    margin-left: 50px;
-    margin-right:50px;
+    margin: 30px 30px 75px 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -64,17 +78,21 @@ img {
     width:600px;
 }
 article {
-    padding: 5px;
+    padding: 15px;
     background: white;
     width: 300px;
     height: 125px;
     margin-left: 20px;
     margin-bottom: -30px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 20px;
     position: absolute;
     bottom: 0;
-    /* TODO add shadow */
+    filter: drop-shadow(0 2px 2px rgba(163, 163, 163));
+    border-radius: 2px;
+}
+article p {
+    /* TODO */
 }
 .post1 {
     background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
@@ -98,7 +116,7 @@ article {
     background: url("https://live.staticflickr.com/5245/5229573910_7ccdfca5ce_b.jpg");
 }
 .post4{
-    background: url("https://live.staticflickr.com/5245/5229573910_7ccdfca5ce_b.jpg");
+    background: url("https://i.imgur.com/9U8J3XT.jpg");
 }
 .post2, .post3, .post4 {
     margin-bottom: 50px;
@@ -110,8 +128,9 @@ article {
     background-position-y: 25%;
 }
 h2 {
-    font-size:18px;
+    font-size: 20px;
+    font-family: 'David Libre', serif;
     margin-top: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 /* TODO: media queries */
