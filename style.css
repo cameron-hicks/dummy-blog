@@ -40,15 +40,6 @@ footer {
     text-align: center;
     color: white;
 }
-.banner a {
-    font-family: 'David Libre', serif;
-}
-.banner a, footer a {
-    color:white;
-}
-.banner a:hover, footer a:hover {
-    color: #fce21b;
-}
 nav {
     margin-right: 20px;
     margin-top: 10px;
@@ -71,6 +62,18 @@ a:hover {
 }
 a:visited {
     color: black;
+}
+.banner a {
+    font-family: 'David Libre', serif;
+}
+.banner a, footer a {
+    color:white;
+}
+.banner a:hover, footer a:hover {
+    color: #fce21b;
+}
+.banner a:visited, footer a:visited{
+    color:white;
 }
 input[type="search"]{
     /* TODO: make the magnifying glass search box */
