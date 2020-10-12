@@ -1,17 +1,20 @@
 body {
     margin: 0;
+    /* width: 1000px; */
 }
-.main {
+header {
     margin: 0 auto;
-    width: 1000px;
-    font-family: 'Open Sans', sans-serif;
+    width: auto;
+    max-width: 1000px;
+    min-width: 860px;
+    display: flex;
+    justify-content: space-between;
 }
 .banner, footer {
-    margin: 0;
-    width: 100%;
+    /* margin: 0; */
+    /* width: 100vw; */
 }
 .banner {
-    /* copy font family and color from blm website */
     padding:4px;
     height:20px;
     background-color: black;
@@ -23,14 +26,9 @@ body {
 .equals {
     color: #fce21b;
 }
-header {
-    margin: 10px 30px 0 30px;
-    display: flex;
-    justify-content: space-between;
-    /* font-family */
-}
 header h1{
     font-family: 'Sansita Swashed', cursive;
+    margin-left: 30px;
 }
 footer {
     background-color: black;
@@ -39,6 +37,22 @@ footer {
     font-family: 'David Libre', serif;
     text-align: center;
     color: white;
+}
+.main {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1000px;
+    min-width: 860px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* TODO: Scroll effect on post previews in main div. */
+    /* height: 600px;
+    overflow-y: scroll; */
+}
+.content {
+    margin: 30px 30px 75px 30px;
+    width:600px;
 }
 nav {
     margin-right: 20px;
@@ -55,6 +69,7 @@ a {
     font-family: 'Open Sans Condensed', sans-serif;
     color: black;
     text-decoration: none;
+    letter-spacing: 0.1em;
 }
 a:visited {
     color: black;
@@ -65,6 +80,7 @@ a:hover {
 }
 .banner a {
     font-family: 'David Libre', serif;
+    letter-spacing:normal;
 }
 .banner a, footer a {
     color:white;
@@ -97,14 +113,6 @@ input[type="search"]{
     font-size: 12px;
     margin: 2px;
 }
-.content {
-    margin: 30px 30px 75px 30px;
-    display: flex;
-    justify-content: space-between;
-}
-.carousel {
-    width:600px;
-}
 article {
     padding: 15px;
     background: white;
@@ -128,6 +136,7 @@ article {
     background-position-x: 25%;
     background-position-y: 25%; */
     margin-bottom: 50px;
+    width: 600px; 
 }
 #post1 {
     /* TODO: Until scroll, this is the only post visible. */
