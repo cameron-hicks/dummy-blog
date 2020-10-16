@@ -176,9 +176,82 @@ article {
     background: url("https://i.imgur.com/9U8J3XT.jpg?1");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: 25%;
-    background-position-y: 25%;
+    /* background-position-x: 25%;
+    background-position-y: 25%; */
 }
+
+/* TODO: media queries */
+@media(max-width: 500px){
+
+    body {
+        width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header {
+        display: block;
+        /* align-items: center; */
+    }
+
+    header h1 {
+        margin: 0 auto;
+        /* TODO: why does this not work to center it? */
+    }
+
+    nav {
+        border: 2px solid #130502;
+        border-radius: 5px;
+    }
+
+    nav li {
+        /* display: block; */
+    }
+
+    a {
+        font-size: 16px;
+    }
+    
+    .main {
+        width: 500px;
+        align-items: center;
+        margin: 10px;
+    }
+   
+    .featured {
+        display: block;
+        /* width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px; */
+    }
+
+    .sidebar nav {
+        /* border: 2px solid #130502;
+        border-radius: 5px; */
+        padding: 10px; 
+        /* width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px; */
+    }
+    
+    .post {
+        /* width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px; */
+    }
+
+    article {
+        font-size: 16px;
+    }
+
+    .carousel {
+        /* width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px; */
+        height: 1900px;
+        padding: 10px;
+        overflow: visible;
+    }
 /* TODO: Make the other post previews appear only on scrolling down. */
 /* .not_featured_invisible {
     display: none;
