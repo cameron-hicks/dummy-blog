@@ -45,6 +45,7 @@ footer {
     min-width: 860px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     /* TODO: Scroll effect on post previews in main div. */
     /* height: 600px;
@@ -142,6 +143,7 @@ article {
     background-position-y: 25%; */
     margin-bottom: 50px;
     width: 600px; 
+    /* overflow: visible; */
 }
 #post1 {
     /* TODO: Until scroll, this is the only post visible. */
@@ -183,10 +185,19 @@ article {
 } */
 /*TODO: On scrolldown, toggle .not_featured and increase top margin between not_featured and post1.*/
 .not_featured_visible {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 100px; */
+    height: 220px;
+    width: 590px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .not_featured_visible .post{
-    height:200px;
+    display: inline;
+    height:auto;
+    width: auto;
+    margin: 50px 50px;
 }
 h2 {
     font-size: 20px;
