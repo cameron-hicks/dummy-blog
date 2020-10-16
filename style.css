@@ -127,7 +127,12 @@ article {
     filter: drop-shadow(0 2px 2px rgba(163, 163, 163));
     border-radius: 2px;
 }
-/* TODO: This class selector is not affecting the background of each div in class post. However, if I copy-paste the code into #post1, then it takes effect. */
+/* Fade in additional styles on articles when the posts they are a child of get hovered */
+.post:hover > article {
+    filter:  drop-shadow(0 5px 5px rgba(163, 163, 163));
+    transition: 0.5s;
+}
+/* TODO: This .post class selector is not affecting the background of each div in class post. However, if I copy-paste the code into #post1, then it takes effect. */
 .post {
     position: relative;
     /* center background images, auto size to fit div, and prevent tiling */
@@ -166,7 +171,7 @@ article {
     background-position-y: 25%;
 }
 #post4{
-    background: url("https://i.imgur.com/9U8J3XT.jpg");
+    background: url("https://i.imgur.com/9U8J3XT.jpg?1");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 25%;
