@@ -4,20 +4,38 @@ body {
     background-color: #FFFFFF;
 }
 .main {
-    margin: 30px 30px 200px 30px;
-    width: auto;
+    margin: 0 auto 100px auto;
     max-width: 1000px;
-    min-width: 860px;
-    /* TODO: Fix horizontal margins. I want this div to be centered in the viewport, not stuck to the left side. My usual strategy, margin: 0 auto, just creates 0 margins all around. */
+    /* TODO: The min width. doesn't seem to take effect. .main continues to shrink below its min width. */
+    min-width: 885px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    /* NOTE: Centering the content seems to work only if the width of the div is specified with an absolute unit. Relative units like vw cause the content to decenter. */
+    justify-content: center;
+    /* overflow: hidden; */
 }
 header {
-    margin: 0 30px 30px 30px;
-    width: auto;
+    /* margin: 0 30px 30px 30px;  */
+    /* margin: 0 auto; */
+    /* width: auto;
     max-width: 1000px;
-    min-width: 860px;
+    min-width: 885px; */
+
+    /* TODO: Doesn't shrink in the same way as the rest of the child divs in .main when the viewport shrinks. Overflows the viewport. 
+    Seems to scoot and resize properly below vw 1000px, then expands to stick to right and left sides past 1000px. */
+    /* The below code is a tip found on stack overflow, to be used in conjunction with overflow: hidden on parent div */
+    /* clear: both; */
+    margin: 0;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    /* Can also use position and inline blocks to get the same effect here as a flexbox. */
+    display: inline-block;
+    position: relative;
+    /* overflow: hidden; */
+    /* flex: 1; */
 }
 .banner, footer {
     /* margin: 0; */
@@ -37,7 +55,11 @@ header {
 }
 header h1{
     font-family: 'Sansita Swashed', cursive;
-    /* margin-left: 30px; */
+    margin: 0;
+    display: inline;
+    /* width: auto;
+    flex-shrink: 1; */
+    /* flex: 1; */
 }
 footer {
     background-color: #130502;
@@ -48,9 +70,20 @@ footer {
     color: #FFFFFF;
     /* margin-top: 100px; */
 }
+header nav {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    /* flex: 1; */
+    /* width: auto;
+    flex-shrink: 1; */
+    /* clear: both; */
+}
 nav {
-    margin-right: 20px;
-    margin-top: 10px;
+    /* margin-right: 20px;
+    margin-top: 10px; */
+    /* clear: both; */
 }
 ul {
    margin: none;
@@ -92,8 +125,9 @@ input[type="search"]{
     border-radius: 5px;
 }
 .down {
-    font-size: 12px;
-    margin: 2px;
+    /* slightly smaller relative to the font size of the element it's within */
+    font-size: 0.9em;
+    margin: 0 2px;
 }
 h2 {
     font-size: 20px;
@@ -109,6 +143,11 @@ hr {
 }
 .sidebar {
     /* TODO: Instead of locking into a flexbox div with the featured post, rearrange all the content into the same flexbox div. Two columns: on the left, .featured and .carousel in flex-direction: column; on the right, just the sidebar. Let its position move as the user scrolls so that it hovers near the top of the viewport.  */
+    position: fixed;
+    /* A left position of 75% of the viewport width puts the sidebar at about the right edge of .main. */
+    left: 75vw;
+    top: 225px;
+    margin: 0 10px;
 }
 .sidebar ul{
     margin: 5px 0;
@@ -118,15 +157,17 @@ hr {
     display: block;
 }
 .featured {
+    margin-bottom: 150px;
     /* TODO: Until scroll, #post1 and .sidebar (both within .featured) are the only content visible. */
     /* margin: 0 auto;
     width: auto;
     max-width: 1000px;
     min-width: 860px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 75px;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center; */
+    /* position: relative; */
+    /* padding-right: 250px; including this line was supposed to prevent the sidebar from overlapping with the featured post, but it doesn't work. */
 }
 /* .content {
     margin: 30px 30px 75px 30px;
@@ -155,7 +196,6 @@ article {
 .post {
     position: relative;
     width: 600px; 
-    /* overflow: visible; */
 }
 #post1 {
     background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
@@ -181,7 +221,6 @@ article {
 .not_featured_visible {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 260px;
     width: 1900px;
     padding: 10px 0;
@@ -189,6 +228,8 @@ article {
 .not_featured_visible > .post{
     display: inline;
     height: 200px;
+    width: 450px;
+    margin-right: 50px;
 }
 .not_featured_visible > .post > article{
     margin-bottom: 0;
@@ -215,55 +256,65 @@ article {
     background-position-y: 25%; */
 }
 
-/* TODO: media queries */
-@media(max-width: 500px){
+@media(max-width: 900px){
+    /* TODO: When the window becomes small enough that the sidebar would overlap with the content, handle that. Maybe by resizing the content? Or by collapsing the sidebar? */
+    
+}
 
-    body {
+/* TODO: media queries */
+ @media(max-width: 500px){
+
+    /* body {
         width: 100vw;
         margin-left: 10px;
         margin-right: 10px;
-    }
+    } */
 
     header {
-        display: block;
+        /* display: block; */
         /* align-items: center; */
     }
 
     header h1 {
-        margin: 0 auto;
+        /* margin: 0 auto; */
         /* TODO: why does this not work to center it? */
     }
 
-    nav {
+    /* nav {
         border: 2px solid #130502;
         border-radius: 5px;
-    }
+    } */
 
     nav li {
         /* display: block; */
     }
 
     a {
-        font-size: 16px;
+        /* font-size: 16px; */
     }
     
     .main {
-        width: 500px;
+        /* width: 500px;
         align-items: center;
-        margin: 10px;
+        margin: 10px; */
     }
    
     .featured {
-        display: block;
+        /* display: block; */
         /* width: 100vw;
         margin-left: 10px;
         margin-right: 10px; */
     }
 
+    sidebar {
+        /* TODO: This doesn't work. The position is still fixed. */
+        /* position: relative; */
+    }
+
     .sidebar nav {
         /* border: 2px solid #130502;
         border-radius: 5px; */
-        padding: 10px; 
+        /* padding: 10px;  */
         /* width: 100vw;
         margin-left: 10px;
         margin-right: 10px; */
@@ -276,33 +327,33 @@ article {
     }
 
     article {
-        font-size: 16px;
+        /* font-size: 16px; */
     }
 
     .carousel {
         /* width: 100vw;
         margin-left: 10px;
         margin-right: 10px; */
-        height: 1900px;
+        /* height: 1900px;
         padding: 10px;
-        overflow: visible;
+        overflow: visible; */
     }
     .not_featured_visible {
-        display: block;
+        /* display: block; */
         /* flex-direction: column;
         justify-content: space-between; */
         /* width: 100vw;
         margin-left: 10px;
         margin-right: 10px; */
-        height: 1900px;
+        /* height: 1900px;
         padding: 10px;
-        overflow: visible;
+        overflow: visible; */
     }
     .not_featured_visible > post {
-        display: block;
+        /* display: block;
         height: 200px;
         margin: 10px 10px;
         padding: 10px;
-        overflow: visible;
+        overflow: visible; */
     }
-}
+} 
