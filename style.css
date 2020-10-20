@@ -148,6 +148,8 @@ hr {
     left: 75vw;
     top: 225px;
     margin: 0 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 .sidebar ul{
     margin: 5px 0;
@@ -158,6 +160,13 @@ hr {
 }
 .featured {
     margin-bottom: 150px;
+    /* Allow the featured post to grow and shrink within constraints as the size of the flexbox container changes */
+    /* QUESTION: Do these styles need to be set on the ultimate child, e.g. #post1, or is it enough to set them on the container's child? */
+    /* QUESTION: Who is the true parent of featured? Which flexbox's size is relevant here? The .main flexbox or another, new one which contains the featured post and the sidebar? */
+    min-width: 450px;
+    max-width: 600px;
+    flex-shrink: 1;
+    flex-grow: 1;
     /* TODO: Until scroll, #post1 and .sidebar (both within .featured) are the only content visible. */
     /* margin: 0 auto;
     width: auto;
@@ -195,11 +204,11 @@ article {
 }
 .post {
     position: relative;
-    width: 600px; 
+    /* flex-basis: 600px;  */
 }
 #post1 {
     background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
-    height:350px;
+    height: 350px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 25%;
@@ -261,99 +270,7 @@ article {
     
 }
 
-/* TODO: media queries */
+
  @media(max-width: 500px){
-
-    /* body {
-        width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px;
-    } */
-
-    header {
-        /* display: block; */
-        /* align-items: center; */
-    }
-
-    header h1 {
-        /* margin: 0 auto; */
-        /* TODO: why does this not work to center it? */
-    }
-
-    /* nav {
-        border: 2px solid #130502;
-        border-radius: 5px;
-    } */
-
-    nav li {
-        /* display: block; */
-    }
-
-    a {
-        /* font-size: 16px; */
-    }
-    
-    .main {
-        /* width: 500px;
-        align-items: center;
-        margin: 10px; */
-    }
-   
-    .featured {
-        /* display: block; */
-        /* width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px; */
-    }
-
-    sidebar {
-        /* TODO: This doesn't work. The position is still fixed. */
-        /* position: relative; */
-    }
-
-    .sidebar nav {
-        /* border: 2px solid #130502;
-        border-radius: 5px; */
-        /* padding: 10px;  */
-        /* width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px; */
-    }
-    
-    .post {
-        /* width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px; */
-    }
-
-    article {
-        /* font-size: 16px; */
-    }
-
-    .carousel {
-        /* width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px; */
-        /* height: 1900px;
-        padding: 10px;
-        overflow: visible; */
-    }
-    .not_featured_visible {
-        /* display: block; */
-        /* flex-direction: column;
-        justify-content: space-between; */
-        /* width: 100vw;
-        margin-left: 10px;
-        margin-right: 10px; */
-        /* height: 1900px;
-        padding: 10px;
-        overflow: visible; */
-    }
-    .not_featured_visible > post {
-        /* display: block;
-        height: 200px;
-        margin: 10px 10px;
-        padding: 10px;
-        overflow: visible; */
-    }
+    /* TODO: Change to a vertical layout for mobile. */
 } 
