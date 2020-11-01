@@ -77,9 +77,9 @@ a:hover {
     color: #fce21b;
 }
 
-.down {
+.arrow {
     font-size: 0.9em;
-    margin: 0 4px;
+    margin: 0 8px 0 2px;
 }
 
 input[type="search"]{
