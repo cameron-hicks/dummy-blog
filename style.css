@@ -1,211 +1,181 @@
-body {
+body { 
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
     color: #130502;
     background-color: #FFFFFF;
 }
-.main {
-    margin: 0 auto 100px auto;
-    max-width: 1000px;
-    /* TODO: The min width. doesn't seem to take effect. .main continues to shrink below its min width. */
-    min-width: 885px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    /* flex: 1; */
-    /* NOTE: Centering the content seems to work only if the width of the div is specified with an absolute unit. Relative units like vw cause the content to decenter. */
-    justify-content: center;
-    /* overflow: hidden; */
-}
-header {
-    /* margin: 0 30px 30px 30px;  */
-    /* margin: 0 auto; */
-    /* width: auto;
-    max-width: 1000px;
-    min-width: 885px; */
 
-    /* TODO: Doesn't shrink in the same way as the rest of the child divs in .main when the viewport shrinks. Overflows the viewport. 
-    Seems to scoot and resize properly below vw 1000px, then expands to stick to right and left sides past 1000px. */
-    /* The below code is a tip found on stack overflow, to be used in conjunction with overflow: hidden on parent div */
-    /* clear: both; */
-    margin: 0;
-    height: 100px;
-    /* display: flex;
-    justify-content: space-between; */
-    /* Can also use position and inline blocks to get the same effect here as a flexbox. */
-    display: inline-block;
-    position: relative;
-    /* overflow: hidden; */
-    /* flex: 1; */
-}
-.banner, footer {
-    /* margin: 0; */
-    /* width: 100vw; */
-}
-.banner {
-    padding:4px;
-    height:20px;
+#banner, #footer {
     background-color: #130502;
     color: #FFFFFF;
     font-size: 16px;
     font-family: 'David Libre', serif;
     text-align: center;
 }
+
+#banner {
+    padding:4px;
+    height:20px;
+}
+
 .equals {
     color: #fce21b;
 }
-header h1{
-    font-family: 'Sansita Swashed', cursive;
-    margin: 0;
-    display: inline;
-    /* width: auto;
-    flex-shrink: 1; */
-    /* flex: 1; */
-}
-footer {
-    background-color: #130502;
+
+#footer {
     height: 75px;
     padding: 75px 0px;
-    font-family: 'David Libre', serif;
-    text-align: center;
-    color: #FFFFFF;
-    /* margin-top: 100px; */
 }
-header nav {
-    margin: 0;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    /* flex: 1; */
-    /* width: auto;
-    flex-shrink: 1; */
-    /* clear: both; */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-nav {
-    /* margin-right: 20px;
-    margin-top: 10px; */
-    /* clear: both; */
-}
-ul {
-   margin: none;
-}
-nav li {
-    display: inline;
-    font-size: 14px;
-}
-a {
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #130502;
-    text-decoration: none;
+
+#header a, #sidebar a {
+    font-size: 1.2em;
     letter-spacing: 0.1em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    color: #130502;
 }
+
+a {
+    text-decoration: none;
+}
+
 a:visited {
     color: #130502;
 }
+
 a:hover {
-    color:dodgerblue;
     text-decoration: underline;
 }
-.banner a {
+
+#header a:hover, #sidebar a:hover {
+    color:dodgerblue;
+}
+
+#banner a, #footer a {
     font-family: 'David Libre', serif;
     letter-spacing:normal;
-}
-.banner a, footer a {
     color:#FFFFFF;
 }
-.banner a:visited, footer a:visited{
+
+#banner a:visited, #footer a:visited{
     color:#FFFFFF;
 }
-.banner a:hover, footer a:hover {
+
+#banner a:hover, #footer a:hover {
     color: #fce21b;
 }
+
+.down {
+    font-size: 0.9em;
+    margin: 0 4px;
+}
+
 input[type="search"]{
     /* TODO: make the magnifying glass search box */
     margin-right: 10px;
     border: 1px solid rgb(163, 163, 163);
     border-radius: 5px;
 }
-.down {
-    /* slightly smaller relative to the font size of the element it's within */
-    font-size: 0.9em;
-    margin: 0 2px;
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+h1 {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 40px;
+}
+
 h2 {
-    font-size: 20px;
+    font-size: 1.5em;
     font-family: 'David Libre', serif;
     margin-top: 2px;
     margin-bottom: 8px;
     color: dodgerblue;
 }
+
 hr {
     width: 300px;
     margin-left: 0px;
     border: 3px solid #fce21b; 
 }
-.sidebar {
-    /* TODO: Instead of locking into a flexbox div with the featured post, rearrange all the content into the same flexbox div. Two columns: on the left, .featured and .carousel in flex-direction: column; on the right, just the sidebar. Let its position move as the user scrolls so that it hovers near the top of the viewport.  */
-    position: fixed;
-    /* A left position of 75% of the viewport width puts the sidebar at about the right edge of .main. */
-    left: 75vw;
-    top: 225px;
-    margin: 0 10px;
-    flex-shrink: 0;
-    flex-grow: 0;
+
+#header ul {
+    display: flex;
+    flex-direction: row;
 }
-.sidebar ul{
-    margin: 5px 0;
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#two-columns {
+    margin-top: 75px;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: auto;
+}
+
+#sidebar {
+    width: 200px;
     padding: 0;
 }
-.sidebar li{
-    display: block;
+
+#left-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 800px;
+    padding-right: 200px;
 }
-.featured {
-    margin-bottom: 150px;
-    /* Allow the featured post to grow and shrink within constraints as the size of the flexbox container changes */
-    /* QUESTION: Do these styles need to be set on the ultimate child, e.g. #post1, or is it enough to set them on the container's child? */
-    /* QUESTION: Who is the true parent of featured? Which flexbox's size is relevant here? The .main flexbox or another, new one which contains the featured post and the sidebar? */
-    min-width: 450px;
-    max-width: 600px;
-    flex-shrink: 1;
-    flex-grow: 1;
-    /* TODO: Until scroll, #post1 and .sidebar (both within .featured) are the only content visible. */
-    /* margin: 0 auto;
-    width: auto;
-    max-width: 1000px;
-    min-width: 860px; */
-    /* display: flex;
-    flex-direction: row; */
-    /* justify-content: center; */
-    /* position: relative; */
-    /* padding-right: 250px; including this line was supposed to prevent the sidebar from overlapping with the featured post, but it doesn't work. */
+
+#divider {
+    margin-top: 75px;
 }
-/* .content {
-    margin: 30px 30px 75px 30px;
-    width:600px;
-} */
-article {
+
+#not-featured-posts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 75px;
+    height: 230px;
+    width: 610px;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.post {
+    position: relative;
+}
+
+.post-preview {
     padding: 15px;
     background: white;
     width: 300px;
     height: 125px;
     margin-left: 20px;
     margin-bottom: -45px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    line-height: 20px;
     position: absolute;
     bottom: 0;
     filter: drop-shadow(0 2px 2px rgba(163, 163, 163));
     border-radius: 2px;
 }
-/* Fade in additional styles on articles when the posts they are a child of get hovered */
-.post:hover > article {
-    filter:  drop-shadow(0 5px 5px rgba(163, 163, 163));
-    transition: 0.5s;
-}
-.post {
-    position: relative;
-    /* flex-basis: 600px;  */
-}
+
 #post1 {
     background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
     height: 350px;
@@ -213,36 +183,20 @@ article {
     background-repeat: no-repeat;
     background-position-x: 25%;
     background-position-y: 40%;
+    margin-bottom: 75px;
 }
 
-/* TODO: Instead of using a CSS carousel, use Javascript to toggle the post previews' styles on scrolling down. On scrolldown, toggle class .not_featured_visible. on the elements included in class .not_featured_invisible so that the _visible styles override the _invisible styles. */
-/* .not_featured_invisible {
-    display: none;
-} */
-
-.carousel {
-    height: 230px;
-    width: 610px;
-    padding: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-.not_featured_visible {
-    display: flex;
-    flex-direction: row;
-    height: 260px;
-    width: 1900px;
-    padding: 10px 0;
-}
-.not_featured_visible > .post{
-    display: inline;
+#not-featured-posts > .post {
     height: 200px;
     width: 450px;
     margin-right: 50px;
+    flex-shrink: 0;
 }
-.not_featured_visible > .post > article{
+
+#not-featured-posts > .post > .post-preview {
     margin-bottom: 0;
 }
+
 #post2{
     background: url("https://live.staticflickr.com/4307/35483499933_45c21a0440_b.jpg"); 
     background-size: cover;
@@ -250,6 +204,7 @@ article {
     background-position-x: 25%;
     background-position-y: 50%;
 }
+
 #post3{
     background: url("https://live.staticflickr.com/5245/5229573910_7ccdfca5ce_b.jpg");
     background-size: cover;
@@ -257,6 +212,7 @@ article {
     background-position-x: 25%;
     background-position-y: 30%;
 }
+
 #post4{
     background: url("https://austenprose.files.wordpress.com/2011/01/austen_warhol_banner.jpg");
     background-size: cover;
@@ -265,12 +221,10 @@ article {
     background-position-y: 25%; */
 }
 
-@media(max-width: 900px){
-    /* TODO: When the window becomes small enough that the sidebar would overlap with the content, handle that. Maybe by resizing the content? Or by collapsing the sidebar? */
+@media(max-width:500px) {
+    
+    #header, #header ul, #two-columns, #not-featured-posts {
+        flex-direction: column;
+    }
     
 }
-
-
- @media(max-width: 500px){
-    /* TODO: Change to a vertical layout for mobile. */
-} 
