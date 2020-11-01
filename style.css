@@ -41,15 +41,17 @@ body {
     letter-spacing: 0.1em;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    color: #130502;
+    /* color: #130502; */
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
 a:visited {
-    color: #130502;
+    /* color: #130502; */
+    color: inherit;
 }
 
 a:hover {
@@ -63,11 +65,11 @@ a:hover {
 #banner a, #footer a {
     font-family: 'David Libre', serif;
     letter-spacing:normal;
-    color:#FFFFFF;
+    /* color:#FFFFFF; */
 }
 
 #banner a:visited, #footer a:visited{
-    color:#FFFFFF;
+    /* color:#FFFFFF; */
 }
 
 #banner a:hover, #footer a:hover {
