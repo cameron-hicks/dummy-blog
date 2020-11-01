@@ -1,0 +1,129 @@
+body { 
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #130502;
+    background-color: #FFFFFF;
+}
+
+#banner, #footer {
+    background-color: #130502;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'David Libre', serif;
+    text-align: center;
+}
+
+#banner {
+    padding:4px;
+    height:20px;
+}
+
+.equals {
+    color: #fce21b;
+}
+
+#footer {
+    height: 75px;
+    padding: 75px 0px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'David Libre', serif;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    color: dodgerblue;
+}
+
+hr {
+    width: 300px;
+    margin-left: 0px;
+    border: 3px solid #fce21b; 
+}
+
+#header ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#two-columns {
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#sidebar {
+    border: 1px solid black;
+    flex-basis: 200px;
+}
+
+#left-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 800px;
+}
+
+#not-featured-posts {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.post {
+    position: relative;
+}
+
+.post-preview {
+    padding: 15px;
+    background: white;
+    width: 300px;
+    height: 125px;
+    margin-left: 20px;
+    margin-bottom: -45px;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0 2px 2px rgba(163, 163, 163));
+    border-radius: 2px;
+}
+
+#post1 {
+    background: url("https://live.staticflickr.com/7771/26257959264_99672c1e22_b.jpg");
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 25%;
+    background-position-y: 40%;
+    margin-bottom: 75px;
+}
+
+
+
+@media(max-width:500px) {
+    
+    #header, #header ul, #two-columns, #not-featured-posts {
+        flex-direction: column;
+    }
+    
+}
